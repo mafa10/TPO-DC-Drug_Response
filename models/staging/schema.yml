@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: stg_drugresponse
+    description: "Capa Silver: Datos estandarizados y limpios."
+    columns:
+      - name: drug_id
+        tests:
+          - not_null
+
+      - name: cell_line_id # Antes decía COSMIC_ID
+        tests:
+          - not_null
+
+      - name: curve_id # Antes decía NLME_CURVE_ID
+        tests:
+          - not_null
+
+      - name: ln_ic50
+        tests:
+          - not_null
+
+      - name: auc_value # Antes decía AUC
+        tests:
+          - not_null

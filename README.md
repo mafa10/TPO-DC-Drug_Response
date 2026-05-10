@@ -16,7 +16,8 @@ Ejecuta solamente el script de python 'ingesta.py', eso va a convertir el csv en
 
 ## PASO 4: Ejecutar
 
-ejecuta el comando: dbt build  
+ejecuta el comando:  
+dbt build --profiles-dir .  
 Eso va a construír el pipeline dbt y crear las tablas de staging y mart (BI y ML)  
 Además va a ejecutar los tests de los schema.yml
 

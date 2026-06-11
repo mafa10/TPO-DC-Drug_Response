@@ -1,4 +1,7 @@
-{{ config(materialized='table')}}
+{{ config(
+    materialized='external',
+    location='mart_ML_drugresponse.parquet'
+) }}
 
 WITH silver_data AS (
     SELECT * FROM {{ ref('stg_drugresponse') }}

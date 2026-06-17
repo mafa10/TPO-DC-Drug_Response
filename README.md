@@ -1,6 +1,6 @@
 # Para ver el Informe de calidad, ver el archivo qualityDoc.md
 
-## PASO 1: Descargate el CSV y pegalo en la raíz del proyecto
+## PASO 1: Descargate el CSV y pegalo en una carpeta "datasets" en la raíz del proyecto
 
 https://www.kaggle.com/datasets/samiraalipour/genomics-of-drug-sensitivity-in-cancer-gdsc
 es el csv que se llama GDSC2-dataset.csv

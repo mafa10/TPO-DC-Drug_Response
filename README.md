@@ -30,6 +30,8 @@ TPO-DC-Drug_Response/
 │   ├── bronze/                        ← Declaración de las fuentes de datos (RAW)
 │   ├── staging/                       ← Limpieza, estandarización de strings y casteos
 │   └── mart/                          ← Modelos Gold finales (BI, ML, Quality)
+├── eda/                               ← EDA del dataset
+    └── EDA_datosCrudos_GDSC2.ipynb/   ← EDA de datos crudos del dataset
 ├── tests/                             ← Validaciones personalizadas de dbt (ej. assert de rangos)
 ├── ingesta.py                         ← Script inicial (CSV → Base DuckDB)
 ├── machine_learning.py                ← Entrenamiento del modelo ML usando Scikit-Learn

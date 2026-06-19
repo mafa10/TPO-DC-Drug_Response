@@ -40,14 +40,6 @@ models:
   - name: mart_ML_drugresponse
     description: "Capa Mart: Datos optimizados con metricas para ML."
     columns:
-      - name: is_public_binary
-        description: "Flag binario. 1 si es publico, 0 si no"
-        tests:
-          - not_null
-          - accepted_values:
-              arguments:
-                values: [0, 1]
-
       - name: dose_amplitude
         description: "Diferencia entre la concentracion maxima y minima."
         tests:

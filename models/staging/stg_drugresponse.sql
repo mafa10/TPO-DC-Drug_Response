@@ -20,11 +20,6 @@ renamed_and_cleaned AS (
         COALESCE(COMPANY_ID, 'unknown') AS company_id,
         
 
-        CASE 
-            WHEN WEBRELEASE IN ('Y', 'N') THEN WEBRELEASE 
-            ELSE 'unknown' 
-        END AS is_public,
-
         TRY_CAST(MIN_CONC AS FLOAT) AS min_concentration,
         TRY_CAST(MAX_CONC AS FLOAT) AS max_concentration,
         TRY_CAST(LN_IC50 AS FLOAT) AS ln_ic50,

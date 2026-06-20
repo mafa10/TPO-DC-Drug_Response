@@ -7,6 +7,10 @@ WITH silver_data AS (
     SELECT * FROM {{ ref('stg_drugresponse') }}
 ),
 
+baselines AS (
+    SELECT * FROM {{ ref('int_cancer_baselines') }}
+),
+
 features AS (
     SELECT
         curve_id,
@@ -32,4 +36,8 @@ features AS (
     WHERE biological_pathway != 'unknown'
 )
 
-SELECT * FROM features
+SELECT 
+    f.*,
+    b.baseline_ic50
+FROM features f
+LEFT JOIN baselines b ON f.cancer_type = b.cancer_type
